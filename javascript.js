@@ -10,11 +10,11 @@ function hello(name) {
 }
 
 function madlib(name, subject) {
-    if (name == undefined) {
+    if (name == undefined || subject == undefined) {
         console.log("Type in a name and subject please");
     } else {
         //name.toString();
-        var output = name + "'s" + " favorite subject in school is " + subject;
+        var output = name + "'s favorite subject in school is " + subject;
         return output;
     }
 }
@@ -48,7 +48,27 @@ function printNumbers(start, finish) {
     }
 }
 
-function printSquare(length)
+function printSquare(length) {
+    star = '*';
+    starRow = star.repeat(length);
+    for (i = 0; i <= length - 1; i++) {
+        console.log(starRow);
+    }
+}
+
+function printBox(length) {
+    star = '*';
+    space = ' ';
+    starOuter = star.repeat(length);
+    starInner = star + space.repeat(length - 2) + star;
+    for (i = 0; i <= length - 1; i++) {
+        if (i == 0 || i == length - 1) {
+            console.log(starOuter);
+        } else {
+            console.log(starInner);
+        }   
+    }
+}
 
 //function positiveNum(numArray) {
 //    length = numArray.length();
